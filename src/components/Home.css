@@ -1,0 +1,255 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.main {
+    margin-top: 1px;
+}
+
+        /* .carousel imags */
+
+.carousel {
+    position: relative;
+    /* box-shadow: 2px 2px 20px #f399ff, -2px -2px 20px #fcb8b8; */
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+            /* scrolling button */
+
+#scroll{
+    display: none;  
+    position: fixed;
+    bottom: 10px;
+    right: 130px;
+    z-index: 99;
+    border: none;
+    color:rgb(128, 4, 185);
+    font-size: 30px;
+}
+#scroll:hover{
+    color: rgb(2, 151, 2);
+}
+
+            /* belcake terdal */
+
+#tdl{
+    margin-top: -60px ;
+    margin-bottom:-20px;
+    font-family: 'Aclonica', sans-serif;
+    padding-top: 17px;
+    background-color: rgb(255, 255, 255);
+    height: 75px;
+    /* box-shadow: 2px 2px 10px #f5cdfa,
+    -2px -2px 10px #fcd7d7; */
+    color: #37074d;
+    text-transform: uppercase;
+  
+}
+
+#tdl h2{
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    width: auto;
+}     
+#tdl h2 span{
+    color: #f05c5c;
+    font-size: 32px;
+}  
+
+#tdl h2 {
+    position: relative;
+
+  }
+  
+#tdl h2 ::after{
+    content: "|";
+    position:absolute; 
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    right: 37%; 
+    width: 25%;
+    animation: typing 3.5s steps(16)  infinite;
+}
+@keyframes typing{
+    to{
+        width: 0%;
+    }
+}
+
+@media only screen and (max-width: 821px) {
+    #tdl h2 ::after{
+        right: 26%;
+        width: 46%;
+    }    
+  }
+  @media only screen and (max-width: 415px) {
+    #tdl h2 ::after{
+        right: 0%;
+        width: 100%;
+    }    
+  }
+                /* 3 types of cards */
+
+#card-img {
+    height: 240px;
+    width: 190px;
+    /* border-radius: 10px; */
+    border-top-left-radius: 105px;
+    border-top-right-radius: 105px;
+    margin: 10px;
+    box-shadow: 2px 2px 10px #f9e4fc, -2px -2px 10px #ffe1e1;
+}
+#card-img:hover {
+    border-radius: 10px;
+    margin: 10px;
+    transform: scale(1.02)
+
+}
+
+#card1 {
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: rgb(228, 207, 247);
+}
+
+#card1 h3 {
+    color: rgb(119, 17, 145);
+    font-family: 'Noto Serif', serif;
+}
+
+#card2 h3 {
+    color: rgb(119, 17, 145);
+    font-family: 'Noto Serif', serif;
+}
+
+#card3 h3 {
+    color: rgb(119, 17, 145);
+    font-family: 'Noto Serif', serif;
+}
+
+#card1 h3:hover {
+    color: rgb(179, 8, 247);
+    font-family: 'Noto Serif', serif;
+}
+
+#card2 h3:hover {
+    color: rgb(179, 8, 247);
+    font-family: 'Noto Serif', serif;
+}
+
+#card3 h3:hover {
+    color: rgb(179, 8, 247);
+    font-family: 'Noto Serif', serif;
+}
+
+#card2 {
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: rgb(228, 207, 247);
+}
+
+#passage {
+    font-size: 15px;
+    font-family: 'Bad Script', cursive;
+}
+
+@media (min-width: 768px) {
+
+    .container-md,
+    .container-sm {
+        max-width: 821px;
+    }
+}
+ 
+                /* main banner */
+
+#main-banner{
+    margin-top: -20px;
+    box-shadow: 2px 2px 10px #f9e4fc, -2px -2px 10px #ffe1e1;
+}
+
+                /* 2 cakes */
+
+#cake {
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+#cake1 {
+    border-top-left-radius: 105px;
+    border-bottom-right-radius: 100px;
+    margin-bottom: 40px;
+    box-shadow: 2px 2px 10px #f6d4fc, -2px -2px 10px #fdd8d8;
+}
+
+#cake2 {
+    border-top-left-radius: 105px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 2px 2px 10px #f4d8f8, -2px -2px 10px #f8cfcf;
+}
+
+#cake1:hover {
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 105px;
+    border-bottom-left-radius: 100px;
+    transform: scale(1.1)
+}
+
+#cake2:hover {
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 105px;
+    border-bottom-left-radius: 100px;
+    transform: scale(1.1)
+}
+
+#titel1 {
+    position: relative;
+    color: rgb(0, 0, 0);
+    top: -22px;
+    font-family: 'Aclonica', sans-serif;
+    color: #a348af;
+
+}
+
+#titel2 {
+    position: relative;
+    color: rgb(0, 0, 0);
+    top: 18px;
+    font-family: 'Aclonica', sans-serif;
+    color: #a348af;
+}
+
+                /* our products */
+
+#product-head{
+    display: flex;
+    font-family: 'Aclonica', sans-serif;
+    text-transform: uppercase;
+    justify-content: center;
+    margin-bottom: 20px;
+}   
+
+.card-group{
+    box-shadow: 2px 2px 10px #f6d4fc, -2px -2px 10px #fdd8d8;
+}
+.card{
+    position:relative;
+    align-items: center;
+}
+#product-imgs{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 190px;
+    width: 160px;
+
+}
+#product-imgs:hover{
+    transform: scale(1.1)
+}

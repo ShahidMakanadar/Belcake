@@ -1,0 +1,79 @@
+#Footer{
+    position:relative;
+    margin-bottom: 2px;
+    /* margin-top: -10px; */
+    width: 100%;  
+    background-image:linear-gradient(-90deg,rgb(222, 107, 245),#fcc880);
+    height: 150px;
+}
+
+
+#name{
+    padding-left: 20px;
+    color: black;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+#Footer{
+    padding: 1px;
+}
+#icons{
+    padding-right: 0px;
+}
+#footer-icon{
+    padding-right: 10px;
+    font-size: 22px;
+    color: rgb(5, 14, 63);
+}
+#footer-icon:hover{
+    transform: scale(1.3);
+    color:green;
+}
+.py-4 {
+    padding-top: 0.5rem!important;
+    padding-bottom: 0.5rem!important;
+}
+#footerLayer{
+    justify-content: center;
+    padding-right: 55px;
+    padding-left: 0px;
+    padding-top: 10px;
+}
+#footerLogoName{
+    padding-right: 100px;
+}
+
+@media only screen and (max-width: 360px) {
+    #name{
+        display: none;
+    }
+    #footerLogoName {
+        padding-right: 55px;
+        padding-left: 20px;
+
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    #name{
+        display: none;
+    }
+    #footerLayer {
+        justify-content: center;
+        padding-right: 7px;
+        padding-left: 0px;
+        padding-top: 10px;
+    }     
+}
+@media only screen and (max-width: 830px) {
+    #name{
+        display: none;
+    }
+    #footerLayer {
+        justify-content: center;
+        padding-right: 20px;
+        padding-left: 0px;
+        padding-top: 10px;
+    }   
+}
