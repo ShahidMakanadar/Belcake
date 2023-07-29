@@ -4,6 +4,7 @@ import Footer from "./Footer"
 
 const About = () => {
     return (    
+        <div>
             <div className="container">
                 <main>
                     <section class="hero">
@@ -21,15 +22,13 @@ const About = () => {
                         </div>
                     </section>
                 </main>
-
-                <div className="footer">
-                    <Footer />
-                </div>
             </div>
+            <div className="footer">
+                    <Footer />
+            </div>
+        </div>
 
-
-
-            )
+    )
 }
 
-            export default About;
+    export default About;

@@ -4,6 +4,7 @@ import Footer from "./Footer"
 
 const Contact = () => {
     return (
+        <div>
             <div className="container">
                 <div class="contact-form">
                     <h2>Contact Us</h2>
@@ -31,11 +32,11 @@ const Contact = () => {
                         <input type="submit" value="Submit" />
                     </form>
                 </div>
-
-                <div className="footer">
-                    < Footer />
-                </div>
             </div>
+            <div className="footer">
+                    <Footer />
+            </div>
+        </div>
     )
 }
 
