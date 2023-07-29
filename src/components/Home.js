@@ -7,7 +7,6 @@ import banner1 from "../img/banner1.jpg";
 import banner2 from "../img/banner2.jpg";
 import banner3 from "../img/banner3.jpg";
 import banner4 from "../img/banner4.jpg";
-import banner5 from "../img/banner5.jpg";
 
 import cake from "../img/cake-types/cake.jpg"
 import pestries from "../img/cake-types/pastries.jpg"
@@ -68,7 +67,6 @@ const Home = () => {
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -82,9 +80,6 @@ const Home = () => {
                         </div>
                         <div class="carousel-item">
                             <img src={banner4} class="d-block w-100" alt="..." />
-                        </div>
-                        <div class="carousel-item">
-                            <img src={banner5} class="d-block w-100" alt="..." />
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
