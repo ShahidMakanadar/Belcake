@@ -111,3 +111,18 @@
     font-weight: 800;
     
  }  
+
+ .form-control {
+    width: 100%;
+    height: 32px;
+}
+
+
+
+
+ .modal-header {
+    background-image: linear-gradient(-90deg,rgb(224 123 243),#f9d29a);
+}
+.modal-footer {
+    background-image: linear-gradient(-90deg,rgb(224 123 243),#f9d29a);
+}

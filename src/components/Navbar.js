@@ -100,20 +100,22 @@ const Navbar = () => {
                                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="loginInputPassword1" class="form-label">Password</label>
+                                    <label for="loginInputPassword1" class="form-label" width="100px">Password</label>
                                     <input type="password" class="form-control" id="loginInputPassword1" />
                                 </div>
                                 <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="loginCheck1" />
                                     <label class="form-check-label" for="loginCheck1">Check me out</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-success">Submit</button>
                             </form>
+                            <br></br>
+                            <h6>New user : signUp here </h6>
                             <button className='btn btn-success btn-sm ' data-bs-toggle="modal" data-bs-target="#signUpModal">SignUp</button>
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -155,7 +157,7 @@ const Navbar = () => {
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>

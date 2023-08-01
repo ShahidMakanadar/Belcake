@@ -15,7 +15,7 @@ const Footer = () => {
 
                     <ul class="nav col-md-6 col-sm-6 justify-content-end list-unstyled d-flex" id="icons">
                         <Link> <li class="bi bi-whatsapp ms-3" id="footer-icon"></li> </Link>
-                        <Link> <li class="bi bi-instagram ms-3" id="footer-icon"></li> </Link>
+                        <Link  to="https://www.instagram.com/"  > <li class="bi bi-instagram ms-3" id="footer-icon" ></li> </Link>
                         <Link> <li class="bi bi-google ms-3" id="footer-icon"></li> </Link>
                     </ul>
                 </footer>
