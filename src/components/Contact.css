@@ -61,3 +61,49 @@
     margin-bottom: -79px;
     padding: 0;
   }
+
+  #labels{
+    font-size: 20px;
+    color: black;
+  }
+
+  #submit {
+    position: relative;
+    left: 35%;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000000;
+    transition: all 1000ms;
+    font-size: 10px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #2c9caf;
+  }
+  
+  #submit:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #e626dc;
+  box-shadow: 4px 5px 17px -4px #0b1314;
+}
+
+#submit::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ea7dee;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+#submit:hover::before {
+  width: 250%;
+}

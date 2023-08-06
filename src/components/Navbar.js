@@ -77,14 +77,57 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-  
+
+
+
+
+
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <form>
+                                <div class="main-123">
+                                    <input type="checkbox" id="chk" aria-hidden="true" />
+
+                                    <div class="login-123">
+                                        <form class="form-123">
+                                            <label for="chk" aria-hidden="true">Log in</label>
+                                            <input class="input" type="email" name="email" placeholder="Email" required="" />
+                                            <input class="input" type="password" name="pswd" placeholder="Password" required="" />
+                                            <button>Log in</button>
+                                        </form>
+                                    </div>
+
+                                    <div class="register-123">
+                                        <form class="form-123">
+                                            <label for="chk" aria-hidden="true">Register</label>
+                                            <input class="input" type="text" name="txt" placeholder="Username" required="" />
+                                            <input class="input" type="email" name="email" placeholder="Email" required="" />
+                                            <input class="input" type="password" name="pswd" placeholder="Password" required="" />
+                                            <button>Register</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
 
 
 
             {/* Login modal */}
 
 
-            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            {/* <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -119,12 +162,12 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
             {/* SignUp modal */}
 
-
+            {/* 
             <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -161,10 +204,10 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
-        </div >
+        </div>
     );
 };
 
