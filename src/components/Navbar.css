@@ -63,7 +63,6 @@
    border-top-left-radius: 20px;
    border-bottom-right-radius: 10px; */
 
-
 }
 
 .btn-outline-success {
@@ -72,11 +71,11 @@
   --bs-btn-color: #000000;
   --bs-btn-border-color: #198754;
   --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: #ac0aa4;
+  --bs-btn-hover-bg: #ffb8fb;
   --bs-btn-hover-border-color: #000000;
   --bs-btn-focus-shadow-rgb: 25, 135, 84;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #ac0aa4;
+  --bs-btn-active-bg: #04aa36;
   --bs-btn-active-border-color: #050505;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #198754;
