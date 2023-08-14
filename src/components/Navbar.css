@@ -71,7 +71,7 @@
   --bs-btn-color: #000000;
   --bs-btn-border-color: #198754;
   --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: #ffb8fb;
+  --bs-btn-hover-bg: #f717eb;
   --bs-btn-hover-border-color: #000000;
   --bs-btn-focus-shadow-rgb: 25, 135, 84;
   --bs-btn-active-color: #fff;
@@ -143,11 +143,11 @@
 
 
 
-.modal-content {
+#loginPopUP {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
   color: var(--bs-modal-color);
   pointer-events: auto;
   background-color: transparent;
@@ -165,8 +165,8 @@
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(-90deg, rgb(205, 67, 233), #eca847);
-  max-height: 490px;
-  width: 315px;
+  max-height: 535px;
+  width: 301px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 7px 7px 10px 5px #24004628;
@@ -175,13 +175,16 @@
 .form-123 {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 24px;
+  gap: 5px;
+  padding: 14px;
+  /* height: 500px; */
+  padding-bottom: 0px;
 }
 
 /*checkbox to switch from sign up to login*/
 #chk {
   display: none;
+  border-radius: 100%;
 }
 
 /*Login*/
@@ -207,7 +210,7 @@ label {
 
 .input {
   width: 100%;
-  height: 40px;
+  height: 32px;
   margin-top: 10px;
   background: #ffffff;
   padding: 10px;
@@ -216,7 +219,14 @@ label {
   border-radius: 4px;
 }
 
+#chack{
+  width: 40px;
+}
+
+
+
 /*Register*/
+
 .register-123 {
   background: #ffffff;
   border-radius: 60% / 10%;

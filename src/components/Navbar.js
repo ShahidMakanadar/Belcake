@@ -5,6 +5,18 @@ import "./Navbar.css";
 
 
 const Navbar = () => {
+
+    // const passwd = document.getElementById("passwd");
+    // const chack = document.getElementById("chack");
+
+   function chacked(e){
+    
+    const passwd = document.getElementById("passwd");
+    const chack = document.getElementById("chack");
+        passwd.type = chack.checked ? "text" : "password";
+    }
+
+
     return (
         <div className="container">
             <div class="topNav">
@@ -13,7 +25,6 @@ const Navbar = () => {
                         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.761.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z" />
                     </svg> --- Belcake Terdal - 7760454812</h1>
             </div>
-
             <nav className="navbar navbar-expand-lg bg-body-tertiary ">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
@@ -58,7 +69,7 @@ const Navbar = () => {
                                 </Link>
                             </li> */}
                             <li className="nav-item">
-                                <Link className="nav-link active" to="/Login" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <Link className="nav-link active"  data-bs-toggle="modal" data-bs-target="#loginModal">
                                     Login
                                 </Link>
                             </li>
@@ -79,22 +90,25 @@ const Navbar = () => {
             </nav>
 
 
-
-
-
             <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content" id="loginPopUP">
                         <div class="modal-body">
                             <form>
                                 <div class="main-123">
                                     <input type="checkbox" id="chk" aria-hidden="true" />
-
                                     <div class="login-123">
                                         <form class="form-123">
                                             <label for="chk" aria-hidden="true">Log in</label>
                                             <input class="input" type="email" name="email" placeholder="Email" required="" />
-                                            <input class="input" type="password" name="pswd" placeholder="Password" required="" />
+                                            OR
+                                            <input class="input" type="number" name="mobileNum" placeholder="Mobile Number" required="" />
+                                            <input class="input" id="passwd" type="password" name="pswd" placeholder="Password" required="" />
+                                            <input type="checkbox" onChange={chacked} id="chack" />
+
+                                            <Link className="nav-link active"  data-bs-toggle="modal" data-bs-target="#loginModal">
+                                                    Forgot Password
+                                            </Link>
                                             <button>Log in</button>
                                         </form>
                                     </div>
@@ -103,6 +117,7 @@ const Navbar = () => {
                                         <form class="form-123">
                                             <label for="chk" aria-hidden="true">Register</label>
                                             <input class="input" type="text" name="txt" placeholder="Username" required="" />
+                                            <input class="input" type="number" name="mobileNum" placeholder="Mobile Number" required="" />
                                             <input class="input" type="email" name="email" placeholder="Email" required="" />
                                             <input class="input" type="password" name="pswd" placeholder="Password" required="" />
                                             <button>Register</button>
@@ -114,98 +129,6 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-            {/* Login modal */}
-
-
-            {/* <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="loginModalLabel">Belcake ~ Terdal</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-
-                            <form>
-                                <div class="mb-3">
-                                    <label for="loginInputEmail1" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" placeholder="belcaketerdal123@gmail.com" id="loginInputEmail1" aria-describedby="emailHelp" />
-                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="loginInputPassword1" class="form-label" width="100px">Password</label>
-                                    <input type="password" class="form-control" id="loginInputPassword1" />
-                                </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="loginCheck1" />
-                                    <label class="form-check-label" for="loginCheck1">Check me out</label>
-                                </div>
-                                <button type="submit" class="btn btn-success">Submit</button>
-                            </form>
-                            <br></br>
-                            <h6>New user : signUp here </h6>
-                            <button className='btn btn-success btn-sm ' data-bs-toggle="modal" data-bs-target="#signUpModal">SignUp</button>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-
-
-            {/* SignUp modal */}
-
-            {/* 
-            <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="signUModalLabel">Belcake ~ Terdal</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-
-                            <form>
-                                <div class="mb-3">
-                                    <label for="signUInputEmail1" class="form-label">Email address</label>
-                                    <input type="email" placeholder="belcaketerdal123@gmail.com" class="form-control" id="signUInputEmail1" aria-describedby="emailHelp" />
-                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="signUInputPassword1"class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="signUInputPassword1" />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="signUInputPassword1" class="form-label">confirm Password</label>
-                                    <input type="password"  class="form-control" id="signUInputPassword1" />
-                                </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="loginCheck1" />
-                                    <label class="form-check-label" for="loginCheck1">Check me out</label>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-
 
         </div>
     );

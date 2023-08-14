@@ -6,6 +6,21 @@ const Contact = () => {
     return (
         <div>
             <div className="container">
+            <ul className="nav col-md-6 col-sm-6 justify-content-end list-unstyled d-flex" id="icons">
+                        <a href="https://api.whatsapp.com/send?phone=7760454812&text=Hii BelCake Terdal">
+                            <li className="bi bi-whatsapp ms-3" id="footer-icon"></li>
+                        </a>
+                        <a href="https://www.facebook.com/shakur.mujawar">
+                            <li className="bi bi-facebook ms-3" id="footer-icon"></li>
+                        </a>
+                        <a href="https://www.instagram.com/belcakes_terdal">
+                            <li className="bi bi-instagram ms-3" id="footer-icon"></li>
+                        </a>
+                        {/* ::
+                        <a href=" ">
+                            <li className="bi bi-telephone-forward ms-2" id="footer-icon"></li>
+                        </a> */}
+                    </ul>
                 <div class="contact-form">
                     <h2>Contact Us</h2>
                     <form action="#" method="post">

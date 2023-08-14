@@ -1,0 +1,341 @@
+
+  .baner {
+    /* background-image: url("../img/logo.png"); */
+    background-image:linear-gradient(-90deg,rgb(231, 144, 248),#f8e3c5);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    text-align: center;
+    padding-top: 50px;
+    width: 100%;
+    margin-top: -75px;
+    margin-bottom: 0px;
+
+  }
+  #heade{
+    font-size: 40px;
+    font-family: 'Aclonica', sans-serif;
+  }
+  #pass{
+    font-size: 20px;
+    color: black;
+  }
+  
+
+  @media (max-width: 991px) {
+    #heade{
+        font-size: 30px;
+        font-family: 'Aclonica', sans-serif;
+      }
+      #pass{
+        font-size: 15px;
+        color: black;
+      }
+      
+
+  }
+  
+  @media (max-width: 333px) {
+    #heade{
+        font-size: 25px;
+        font-family: 'Aclonica', sans-serif;
+      }
+      #pass{
+        font-size: 10px;
+        color: black;
+      }
+      
+
+  }
+
+  /* scrolling style */
+
+  #scroll{
+    display: none;  
+    position: fixed;
+    bottom: 10px;
+    right: 130px;
+    z-index: 99;
+    border: none;
+    color:rgb(128, 4, 185);
+    font-size: 35px;
+    border-width: 5px black;
+}
+#scroll:hover{
+    color: rgb(2, 151, 2);
+    font-size: 40px;
+}
+
+
+  /* dynamic card's */
+
+  .carde {
+    margin-top: 15px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px -3px #eecbf5;
+    transition: 0.2s ease-in-out;
+    margin-top: 15px;
+    padding: 5px;
+  }
+  
+  .carde:hover {
+    cursor: pointer;
+  }
+  #card-imgs{
+    width: 100%;
+  }
+  .img {
+    width: 100%;
+    height: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: linear-gradient(#7980c5, #9198e5);
+    display: flex;
+    align-items: top;
+    justify-content: right;
+    z-index: 1;
+  }
+  #save-logo{
+    position:absolute;
+    display: flex;
+    z-index: 2;
+
+  }
+  
+  #save-icon {
+    border-radius: 100%;
+    margin: 8px;
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    
+  }
+  
+  #save-icon:hover  {
+    background: linear-gradient(#636262, #fffbfa);
+  }
+  #save-icon:active  {
+    background: linear-gradient(#f3d5a7, #e283e6);
+  }
+
+  .text {
+    padding: 7px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center
+    
+  }
+  
+  .text .h3 {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    display: inline;
+    text-align: center;
+    margin-bottom: -1px;
+  }
+
+
+
+
+
+
+  /* button */
+.order-btn{
+    display: flex;
+    position: relative;
+    margin-bottom: 5px;
+    margin-left: 25px;
+   
+
+}
+
+  .cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    margin-left: 160px;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-top: 7px;
+    border-radius: 50px;
+    background: #dcb1e7;
+    width: 45px;
+    height: 35px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+   }
+   
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover:before {
+    width: 100%;
+    background: #a76ee9;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }
+
+
+/* whats app logo */
+   #wp_icon{
+    position: relative;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    background-color:transparent;
+    margin-top: 8px;
+
+   }
+   #wp_icon:active{
+    position: relative;
+    display: flex;
+    width: 33px;
+    height: 33px;
+    background-color:transparent;
+    margin-top: 8px;
+
+   }
+
+   .footer {
+    margin-top: 100px;
+    margin-bottom: -79px;
+    
+  }
+
+
+/* media query */
+
+
+  @media (max-width: 1201px) {
+    .img {
+      width: 100%;
+      height: 300px;
+
+    }
+    .order-btn{
+      margin-bottom: 5px;
+      margin-left: 20px;
+    }
+  
+    .cta {
+      margin-left: 120px;
+     }
+    #wp_icon{
+      margin-top: 8px;
+    }
+     #wp_icon:active{
+      margin-top: 8px;
+    }
+  }
+  @media (max-width: 992px) {
+    .img {
+      width: 100%;
+      height:280px;
+
+    }
+    .order-btn{
+      margin-bottom: 5px;
+      margin-left: 10px;
+    }
+  
+    .cta {
+      margin-left: 50px;
+     }
+    #wp_icon{
+      margin-top: 8px;
+    }
+     #wp_icon:active{
+      margin-top: 8px;
+    }
+  }
+  
+
+  @media (max-width: 820px) {
+    .img {
+      width: 100%;
+      height:240px;
+
+    }
+    .order-btn{
+      margin-bottom: 5px;
+      margin-left: 5px;
+    }
+  
+    .cta {
+      margin-left: 45px;
+     }
+    #wp_icon{
+      margin-top: 8px;
+      margin-left: 5px;
+    }
+     #wp_icon:active{
+      margin-top: 8px;
+    }
+      
+
+  }
+  @media (max-width: 420px) {
+    .img {
+      width: 100%;
+      height:350px;
+
+    }
+    .order-btn{
+      margin-bottom: 5px;
+      margin-left: 20px;
+    }
+  
+    .cta {
+      margin-left: 150px;
+     }
+    #wp_icon{
+      margin-top: 8px;
+      margin-left: 5px;
+    }
+     #wp_icon:active{
+      margin-top: 8px;
+    }
+      
+
+  }

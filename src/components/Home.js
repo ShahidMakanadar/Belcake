@@ -31,7 +31,7 @@ const Home = () => {
 
     let scrollBtn;
     useEffect(() => {
-        scrollBtn = document.getElementById("scroll");
+        scrollBtn = document.getElementById("scroll")
         window.onscroll = function () {
             scrollfun();
         };

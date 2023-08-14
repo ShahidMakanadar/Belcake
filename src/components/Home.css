@@ -28,10 +28,12 @@ html{
     z-index: 99;
     border: none;
     color:rgb(128, 4, 185);
-    font-size: 30px;
+    font-size: 35px;
+    border-width: 5px black;
 }
 #scroll:hover{
     color: rgb(2, 151, 2);
+    font-size: 40px;
 }
 
             /* belcake terdal */
