@@ -6,14 +6,17 @@ html{
     margin-top: 1px;
 }
 
+
         /* .carousel imags */
 
 .carousel {
     position: relative;
+ 
     /* box-shadow: 2px 2px 20px #f399ff, -2px -2px 20px #fcb8b8; */
 }
 
 .container {
+
     margin-top: 50px;
     margin-bottom: 80px;
 }

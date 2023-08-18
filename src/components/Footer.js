@@ -1,16 +1,16 @@
 import React from "react";
 import "./Footer.css"
 import logo from "../img/logo.png"
-// import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";  
 
 const Footer = () => {
     return (
         <div className="container" id="Footer">
 
-                <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 my-4 border-top" id="footerLayer">
-                    <div class="col-md-6 col-sm-6  d-flex align-items-center" id="footerLogoName">
-                        <img src={logo} alt="Logo" width="95" height="40" class="d-inline-block align-text-top" />
-                        <span class="mb-3 mb-md-0 text-muted" id="name">© 2023 Belcake ~ Terdal</span>
+                <footer className="d-flex flex-wrap justify-content-between align-items-center py-4 my-4 border-top" id="footerLayer">
+                    <div className="col-md-6 col-sm-6  d-flex align-items-center" id="footerLogoName">
+                        <img src={logo} alt="Logo" width="95" height="40" className="d-inline-block align-text-top" />
+                        <span className="mb-3 mb-md-0 text-muted" id="name">© 2023 Belcake ~ Terdal</span>
                     </div>
 
                     <ul className="nav col-md-6 col-sm-6 justify-content-end list-unstyled d-flex" id="icons">

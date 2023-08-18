@@ -9,7 +9,7 @@ import About from './components/About';
 
 function App() {
   return (
-    <div>
+    <div className="">
       <BrowserRouter>
         < Navbar />
         <Routes>

@@ -43,13 +43,13 @@ const OrderCake = () => {
         {title: "black-chocholate",price: 300,image: card3},
         {title:"rass-malayee",price: 400,image: card4},
         {title:"stroberry",price: 500,image: card5}
-
+        
     ]
 
     return (
         <div className="container">
-                <section class="baner">
-                    <div class="hero-content">
+                <section className="baner">
+                    <div className="hero-content">
                         <h1 id="heade">Order Your Quality Premium Cake</h1>
                         <p id="pass">Your Trusted Baking Partner BELCAKE TERDAL</p>
                     </div>
@@ -57,12 +57,12 @@ const OrderCake = () => {
 
              {/* scrolling functioin */}
 
-                <div>
-                    <i class="bi bi-arrow-up-circle-fill" onClick={topscrollfun} id="scroll"></i>
+                <div className="">
+                    <i className="bi bi-arrow-up-circle-fill" onClick={topscrollfun} id="scroll"></i>
                 </div>
                         
              {/* display cards  */}
-                <div class="row">
+                <div className="row">
                     {CardDetails.map(items => {
 
                             // const img = "https://i.postimg.cc/ZqS9p4kk/card1.jpg";  
@@ -75,17 +75,17 @@ const OrderCake = () => {
                             const wpLink = [img,titl,prz]
                          
                             return(
-                                <div class="col-12 col-sm-4">
-                                    <div class="carde">
-                                        <div class="img" >
+                                <div className="col-12 col-sm-4">
+                                    <div className="carde">
+                                        <div className="img" >
                                             <img id="card-imgs" src={img} alt="..." ></img>
                                             <p id="save-logo">
                                                 <img id="save-icon" src={save_icon}  alt="..." ></img>                               
                                             </p>
                                         </div>
 
-                                        <div class="text">
-                                            <p class="h3">{titl}</p>
+                                        <div className="text">
+                                            <p className="h3">{titl}</p>
                                             <h5> Rs : {prz}</h5>
                                         </div>
                                         <div className="order-btn">
@@ -94,7 +94,7 @@ const OrderCake = () => {
                                                 <img id="wp_icon" src={wp} alt="....."></img>
                                             </a>
                                             
-                                            <button class="cta">
+                                            <button className="cta">
                                                 <span>Order</span>
                                                 <svg viewBox="0 0 13 10" height="10px" width="15px">
                                                     <path d="M1,5 L11,5"></path>
