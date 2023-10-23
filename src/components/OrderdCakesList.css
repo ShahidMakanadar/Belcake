@@ -1,0 +1,185 @@
+#dateTime{
+  position: absolute;
+  font-size: 11px;
+  font-weight: 700;
+  right: 10px;
+  top: 3px;
+}
+
+/* UI.Versel css code  */
+.cards123 {
+    margin-top: 40px;
+    /* gap: 15px; */
+    max-width: 1290px;
+    height: 0px;  
+    padding-left: 200px;
+    padding-right: 200px;
+    
+  }
+
+  @media only screen and (max-width: 995px) {
+    .cards123 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+  }
+  
+  .cards123 #card123 {
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 230, 249);
+    cursor: pointer;
+    transition: 500ms;
+  }
+
+  .cards123:hover > #card123:not(:hover) {
+    filter: blur(6px);
+    transform: scale(0.9, 0.9);
+    
+  }
+
+/* bootstap cards OrderCardLayout */
+#CardBody{
+    padding-right: 1px;
+}
+#CardBody h6{
+  font-size: 13px;
+}
+#CardBody p{
+  border-top: solid 1px black;
+  font-size: 13px;
+}
+#CardBody p span{
+  color: black;
+  font-weight: 700;
+  font-size: 13px;
+}
+#images{
+    height: 180px;
+    width: 1290px;
+    margin-bottom: -6px;
+}
+
+/* span tage for total price and name  */
+#spanTag{
+    color: rgb(2, 156, 2);
+}
+/* photo on cake */
+.photoOnCake{
+  position: relative;
+  width: 20px;
+  margin-top: -20px;
+  left: 105px;
+  bottom: -3px;
+}
+
+/* cancle order .CancleBtn  */
+.CancleBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #183153;
+  font-family: "Montserrat", sans-serif;
+  /* box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2); */
+  overflow: hidden;
+  border: none;
+  height: 38px;
+ }
+ 
+ .CancleBtn:after {
+  content: " ";
+  width: 0%;
+  height: 25px;
+  background: #ff1e1e;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+ }
+ 
+ .CancleBtn:active span {
+    scale: 1.2;
+ }
+
+ .CancleBtn:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+ }
+ 
+ .CancleBtn span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ .CancleBtn:hover span {
+  color: #ffffff;
+  animation: scaleUp 0.3s ease-in-out;
+ }
+ 
+ @keyframes scaleUp {
+  0% {
+   transform: scale(1);
+  }
+ 
+  50% {
+   transform: scale(0.95);
+  }
+ 
+  100% {
+   transform: scale(1);
+  }
+ }
+
+ /* order status */
+ .OrderStatus{
+  padding-top: 6px;
+  background-color: #fffbe4;
+  padding-left: 10px;
+ }
+ 
+ #StatusOfOrder{
+  width: 60px;
+  background-color: rgb(254, 254, 254);
+  color: rgb(0, 0, 0);
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  padding-top: 1px;
+  border: solid 1px white;
+  border-radius: 6px;
+ }
+
+ #StatusOfOrderDelivered{
+  width: 60px;
+  background-color: rgb(20, 174, 2);
+  color: rgb(255, 255, 255);
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  padding-top: 1px;
+  border: solid 1px white;
+  border-radius: 6px;
+ }
+
+ #StatusOfOrderDispatched{
+  width: 60px;
+  background-color: rgb(255, 155, 5);
+  color: rgb(255, 255, 255);
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  padding-top: 1px;
+  border: solid 1px white;
+  border-radius: 6px;
+ }
+

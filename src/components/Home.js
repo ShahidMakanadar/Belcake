@@ -29,7 +29,7 @@ import prod8 from "../img/products/prod8.png"
 
 const Home = () => {
 
-    let scrollBtn;
+    let scrollBtn = 
     useEffect(() => {
         scrollBtn = document.getElementById("scroll")
         window.onscroll = function () {
@@ -51,11 +51,9 @@ const Home = () => {
 
     return (
         <div className="main">
-            
-            
 
             {/* belcake terdal titel */}
-
+                     
             <div className="container" id="tdl">
                 <h2> <span>B</span>elcake ~<span>T</span>erdal</h2>
             </div>

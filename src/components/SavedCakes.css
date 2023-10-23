@@ -1,0 +1,11 @@
+.banerrr {
+    background-image: linear-gradient(-90deg,rgb(231, 144, 248),#f8e3c5);
+    background-size: cover;
+    background-position: center;
+    height: 120px;
+    text-align: center;
+    padding-top: 35px;
+    width: 100%;
+    margin-top: -75px;
+    margin-bottom: 0px;
+}

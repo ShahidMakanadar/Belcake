@@ -4,7 +4,7 @@
     background-image:linear-gradient(-90deg,rgb(231, 144, 248),#f8e3c5);
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 222px;
     text-align: center;
     padding-top: 50px;
     width: 100%;
@@ -94,6 +94,19 @@
     align-items: top;
     justify-content: right;
     z-index: 1;
+    animation: animate 0.4s  10 ;
+  }
+
+  @keyframes animate {
+    0%{
+      background-color:#eeb6fc ;
+    }
+    50%{
+      background-color:#d8b9de ;
+    }
+    0%{
+      background-color:#eeb6fc ;
+    }
   }
 
   #card-imgs {
@@ -101,30 +114,245 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 140px;
     /* border-bottom-right-radius: 25px; */
+    z-index: 1;
   }
+
+
+  #remove-icon{
+    font-size: 30px;
+    margin: 2px;
+    background-color: #ff9f9f00;
+    position:absolute;
+    z-index: 2;
+    padding-left: 7px;
+    color: rgba(160, 0, 252, 0.702);
+  
+  }
+  #remove-icon:hover{
+    font-size: 33px;
+  }
+  #remove-icon:active{
+    font-size: 30px;
+  }
+  
+
   #save-logo{
     position:absolute;
     display: flex;
     z-index: 2;
-
-  }
-  
-  #save-icon {
-    border-radius: 100%;
-    margin: 2px;
-    width: 43px;
-    height: 43px;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- 
     
   }
+  
 
-  #save-icon:active  {
-    background: linear-gradient(#f89602, #f409fc);
+
+/* SAVE ICON START*/
+
+  .ui-bookmark {
+    padding-right: 5px;
+    padding-top: 8px;
+    --icon-size: 31px;
+    --icon-secondary-color: rgb(245, 234, 255);
+    --icon-hover-color: rgb(255, 255, 255);
+    --icon-primary-color: rgb(154, 61, 242);
+    --icon-circle-border: 1px solid var(--icon-primary-color);
+    --icon-circle-size: 42px;
+    --icon-anmt-duration: 0.3s;
   }
+  
+  .ui-bookmark input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+  }
+  
+  .ui-bookmark .bookmark {
+    width: var(--icon-size);
+    height: auto;
+    fill: var(--icon-secondary-color);
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+  }
+  
+  .bookmark::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    -webkit-box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+    box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+    border-radius: 50%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+  
+  .bookmark::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: var(--icon-circle-border);
+    opacity: 0;
+  }
+  
+  /* actions */
+  
+  .ui-bookmark:hover .bookmark {
+    fill: var(--icon-hover-color);
+  }
+  
+  .ui-bookmark input:checked + .bookmark::after {
+    -webkit-animation: circles var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: circles var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    -webkit-animation-delay: var(--icon-anmt-duration);
+    animation-delay: var(--icon-anmt-duration);
+  }
+  
+  .ui-bookmark input:checked + .bookmark {
+    fill: var(--icon-primary-color);
+    -webkit-animation: bookmark var(--icon-anmt-duration) forwards;
+    animation: bookmark var(--icon-anmt-duration) forwards;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+  
+  .ui-bookmark input:checked + .bookmark::before {
+    -webkit-animation: circle var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: circle var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    -webkit-animation-delay: var(--icon-anmt-duration);
+    animation-delay: var(--icon-anmt-duration);
+  }
+  
+  @-webkit-keyframes bookmark {
+    50% {
+      -webkit-transform: scaleY(0.6);
+      transform: scaleY(0.6);
+    }
+  
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes bookmark {
+    50% {
+      -webkit-transform: scaleY(0.6);
+      transform: scaleY(0.6);
+    }
+  
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+  
+  @-webkit-keyframes circle {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circle {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes circles {
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circles {
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+
+/* SAVE ICON ENDED */
+
 
 
   .text {
@@ -178,7 +406,7 @@
     display: block;
     margin-top: 7px;
     border-radius: 50px;
-    background: #dcb1e7;
+    background: #e6a2f7;
     width: 45px;
     height: 35px;
     transition: all 0.3s ease;
@@ -216,7 +444,7 @@
    }
    
    .cta:active {
-    transform: scale(0.95);
+    transform: scale(1.1);
    }
 
 
@@ -224,19 +452,16 @@
    #wp_icon{
     position: relative;
     display: flex;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background-color:transparent;
-    margin-top: 8px;
+    margin-top: 15px;
+    transform: scale(0.95);
 
    }
    #wp_icon:active{
     position: relative;
-    display: flex;
-    width: 33px;
-    height: 33px;
-    background-color:transparent;
-    margin-top: 8px;
+    transform: scale(1.1);
 
    }
 
@@ -265,10 +490,10 @@
       margin-left: 120px;
      }
     #wp_icon{
-      margin-top: 8px;
+      margin-top: 15px;
     }
      #wp_icon:active{
-      margin-top: 8px;
+      margin-top: 15px;
     }
   }
   @media (max-width: 992px) {
@@ -304,7 +529,7 @@
       margin-bottom: 5px;
       margin-left: 5px;
     }
-  
+   
     .cta {
       margin-left: 45px;
      }
@@ -361,3 +586,130 @@
       
 
   }
+
+ /* loading2 empty cakes then  */
+.loading2{
+    position: relative;
+    text-align: center;
+    /* left: -10px; */
+    margin-bottom: 200px;
+    margin-top: 200px;
+    top: 30px;
+}
+.loading2 h5{
+  color: #fc9494;
+  margin-top: 40px;
+  font-family: cursive;
+}
+
+.loadingDelete{
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: -35%;
+  z-index: 2;
+}
+
+.saveloading{
+  position: relative;
+  z-index: 2;
+  top: 4px;
+  right: 4px;
+}
+
+/* after delete yes and no button */
+/* yes button */
+.confirmButton {
+  background-color: #28a745; /* Change the background color to green */
+  color: #fff; /* Change the text color to white */
+  padding: 6px 40px; /* Adjust padding to your preference */
+  margin-left: 10px; /* Add some right margin for spacing */
+  border: none; /* Remove the button border */
+  border-radius: 4px; /* Add border radius */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.confirmButton:hover {
+  background-color: #218838; /* Change the background color on hover */
+}
+/* bo button */
+.cancelButton {
+  background-color: #ef3737; /* Change the background color to green */
+  color: #fff; /* Change the text color to white */
+  padding: 6px 40px; /* Adjust padding to your preference */
+  margin-right: 10px; /* Add some right margin for spacing */
+  border: none; /* Remove the button border */
+  border-radius: 4px; /* Add border radius */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.cancelButton:hover {
+  background-color: #882121; /* Change the background color on hover */
+}
+
+
+
+/* search boc */
+
+.input-wrapperOrder {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  margin-top: -50px;
+}
+
+.inputOrder {
+  border-style: none;
+  height: 40px;
+  width: 40px;
+  /* padding: 10px; */
+  outline: none;
+  border-radius: 50%;
+  transition: .5s ease-in-out;
+  background-color: #cd67f3;
+  box-shadow: 0px 0px 5px #ffffff;
+  padding-right: 40px;
+  color: #000000;
+}
+
+.inputOrder::placeholder,
+.inputOrder {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+}
+
+.inputOrder::placeholder {
+  color: #8f8f8f;
+}
+
+.iconOrder {
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  /* right: 0; */
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border-style: none;
+  border-radius: 50%;
+  pointer-events: painted;
+  background-color: transparent;
+  transition: .2s linear;
+}
+
+.iconOrder:focus ~ .inputOrder,
+.inputOrder:focus {
+  box-shadow: none;
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 3px solid #7e4fd4;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+
+}
