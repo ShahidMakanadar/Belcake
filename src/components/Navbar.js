@@ -77,7 +77,7 @@ const Navbar = () => {
             }
             else {
                 setLoading1(true)
-                let data = await fetch('https://belcake-ux-git-main-shahidmakanadar.vercel.app/register', {
+                let data = await fetch('https://belcake-ux.vercel.app/register', {
                     method: 'post',
                     body: JSON.stringify({ userName, mobileNum, email, password }),
                     headers: {
