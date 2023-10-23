@@ -77,7 +77,7 @@ const Navbar = () => {
             }
             else {
                 setLoading1(true)
-                let data = await fetch('https://belcake-ux.vercel.app/register', {
+                let data = await fetch('https://belcakeback.vercel.app/register', {
                     method: 'post',
                     body: JSON.stringify({ userName, mobileNum, email, password }),
                     headers: {
@@ -166,7 +166,7 @@ const Navbar = () => {
         const email = L_email;
         const password = L_password;
         setLoading2(true)
-        let data = await fetch('https://belcake-ux.vercel.app/login', {
+        let data = await fetch('https://belcakeback.vercel.app/login', {
             method: 'post',
             body: JSON.stringify({ email, password }),
             headers: {
@@ -319,7 +319,7 @@ const Navbar = () => {
             else {
                 const profileImage = postImage
 
-                let data = await fetch(`https://belcake-ux.vercel.app/profileUpdate/${id}`, {
+                let data = await fetch(`https://belcakeback.vercel.app/profileUpdate/${id}`, {
                     method: 'put',
                     body: JSON.stringify(profileImage),
                     headers: {
@@ -388,7 +388,7 @@ const Navbar = () => {
             }
             else {
                 setLoading(true)
-                let result = await fetch('https://belcake-ux.vercel.app/forgotPassword', {
+                let result = await fetch('https://belcakeback.vercel.app/forgotPassword', {
                     method: 'post',
                     body: JSON.stringify({ forgotEmail }),
                     headers: {

@@ -56,7 +56,7 @@ const SavedCakes = () => {
             setSaveLoading(true)
             setSaveId(productId)
 
-            let result = await fetch(`https://belcake-ux.vercel.app/saveProduct/${productId}/${userId}`, {
+            let result = await fetch(`https://belcakeback.vercel.app/saveProduct/${productId}/${userId}`, {
                 method: "put",
                 headers: {
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`

@@ -120,8 +120,8 @@ const OrderProcess = () => {
                         try {
                             if (paymentMethod === " currently Disabled") {
                                 setLoading(true)
-                                let getkey = await fetch('https://belcake-ux.vercel.app/getKey')
-                                let OrderData = await fetch(`https://belcake-ux.vercel.app/checkout/${ProductId}`, {
+                                let getkey = await fetch('https://belcakeback.vercel.app/getKey')
+                                let OrderData = await fetch(`https://belcakeback.vercel.app/checkout/${ProductId}`, {
                                     method: "POST",
                                     body: JSON.stringify({ selectedQuantity }),
                                     headers: {
@@ -149,7 +149,7 @@ const OrderProcess = () => {
                                             const razorpay_order_id=  response.razorpay_order_id
                                             const razorpay_signature=  response.razorpay_signature
                                             if(razorpay_payment_id && razorpay_order_id && razorpay_signature){
-                                                let responseVerification = await fetch('https://belcake-ux.vercel.app/Verification',{
+                                                let responseVerification = await fetch('https://belcakeback.vercel.app/Verification',{
                                                     method: 'post',
                                                     body: JSON.stringify({razorpay_order_id, razorpay_payment_id, razorpay_signature}),
                                                     headers: {
@@ -215,7 +215,7 @@ const OrderProcess = () => {
     const handleSavingOrder = async ( razorpay_payment_id, razorpay_order_id) => {
         const photoOnCake = photo;
         setLoading(true)
-        let result = await fetch(`https://belcake-ux.vercel.app/OrderPlace/${auth._id}/${ProductId}`, {
+        let result = await fetch(`https://belcakeback.vercel.app/OrderPlace/${auth._id}/${ProductId}`, {
             method: 'post',
             body: JSON.stringify({ selectedQuantity, photoOnCake, flavour, purpose, nameOnCake, fullName, phoneNmuber, address, city, zip ,razorpay_payment_id, razorpay_order_id}),
             headers: {
@@ -238,7 +238,7 @@ const OrderProcess = () => {
             const SelectCurrentOrder = findcurrentOrder[findcurrentOrder.length - 1];
             const currentOrderId = SelectCurrentOrder._id;
 
-            let finalResult = await fetch(`https://belcake-ux.vercel.app/OrderPlaceOwner/${tempAuth._id}/${currentOrderId}`, {
+            let finalResult = await fetch(`https://belcakeback.vercel.app/OrderPlaceOwner/${tempAuth._id}/${currentOrderId}`, {
                 method: 'get'
             })
             finalResult = await finalResult.json()

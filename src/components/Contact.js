@@ -29,7 +29,7 @@ const Contact = () => {
         else {
 
             setLoading(true)
-            let result = await fetch('https://belcake-ux.vercel.app/sendEmail', {
+            let result = await fetch('https://belcakeback.vercel.app/sendEmail', {
                 method: 'post',
                 body: JSON.stringify({ contactUserId, contactName, contactEmail, quiry, message }),
                 headers: {

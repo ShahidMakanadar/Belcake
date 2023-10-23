@@ -100,7 +100,7 @@ const AddCake = () => {
                 setLoading(true)
 
                 const cakeImage = Image
-                let productData = await fetch('https://belcake-ux.vercel.app/addCake', {
+                let productData = await fetch('https://belcakeback.vercel.app/addCake', {
                     method: 'post',
                     body: JSON.stringify({ cakeImage, cakeName, price, photoCake }),
                     headers: {

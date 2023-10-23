@@ -51,7 +51,7 @@ function ViewAllOrder() {
 
     const getCakeList = async () => {
         setRefreshLoader(true)
-        let result = await fetch(`https://belcake-ux.vercel.app/getViewAllOrders/${userAuth.email}`, {
+        let result = await fetch(`https://belcakeback.vercel.app/getViewAllOrders/${userAuth.email}`, {
             method: 'post',
             headers: {
                 "Content-Type": "application/json"
@@ -92,7 +92,7 @@ function ViewAllOrder() {
                 try {
                     setLoading(true)
                     setLoadingOrderId(id)
-                    let result = await fetch(`https://belcake-ux.vercel.app/RemoveViewAllOrder/${id}/${userAuth._id}`, {
+                    let result = await fetch(`https://belcakeback.vercel.app/RemoveViewAllOrder/${id}/${userAuth._id}`, {
                         method: "DELETE",
                         headers: {
                             authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
@@ -150,7 +150,7 @@ function ViewAllOrder() {
         else {
             setLoadingUpdateId(OrderedCakeId)
             setLoading3(true)
-            let result = await fetch(`https://belcake-ux.vercel.app/updateOrderStatus/${userId}/${orderId}/${OrderedCakeId}`, {
+            let result = await fetch(`https://belcakeback.vercel.app/updateOrderStatus/${userId}/${orderId}/${OrderedCakeId}`, {
                 method: "PUT",
                 body: JSON.stringify({ selectedStatus }),
                 headers: {
@@ -193,7 +193,7 @@ function ViewAllOrder() {
     const searchHandler = async (key) => {
         if (key) {
             try {
-                const result = await fetch(`https://belcake-ux.vercel.app/searchViewOrder/${key}`);
+                const result = await fetch(`https://belcakeback.vercel.app/searchViewOrder/${key}`);
                 const data = await result.json();
 
                 if (Array.isArray(data)) {
