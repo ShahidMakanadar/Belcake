@@ -51,7 +51,7 @@ const ForgotPassword = () => {
             }
             else {
             
-                let result = await fetch(`http://localhost:10000/newPassword/${id}/${token}`, {
+                let result = await fetch(`https://belcake-ux.vercel.app/newPassword/${id}/${token}`, {
                     method: 'post',
                     body: JSON.stringify({ newPassword }),
                     headers: {

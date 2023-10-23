@@ -63,7 +63,7 @@ const OrderCake = () => {
 
     const getCakeList = async () => {
         try {
-            let cakeList = await fetch('http://localhost:10000/cakeList')
+            let cakeList = await fetch('https://belcake-ux.vercel.app/cakeList')
 
             cakeList = await cakeList.json();
             setList(cakeList)
@@ -102,7 +102,7 @@ const OrderCake = () => {
                 setLoading(true)
                 setDeletedCardId(id)
                 try {
-                    let result = await fetch(`http://localhost:10000/deleteCake/${id}`, {
+                    let result = await fetch(`https://belcake-ux.vercel.app/deleteCake/${id}`, {
                         method: "DELETE",
                         headers: {
                             authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
@@ -156,7 +156,7 @@ const OrderCake = () => {
         try {
             setSaveLoading(true)
             setSaveId(productId)
-            let result = await fetch(`http://localhost:10000/saveProduct/${productId}/${userId}`, {
+            let result = await fetch(`https://belcake-ux.vercel.app/saveProduct/${productId}/${userId}`, {
                 method: "put",
                 headers: {
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
@@ -222,7 +222,7 @@ const OrderCake = () => {
     const searchHandler = async (key) => {
         if (key) {
             try {
-                const result = await fetch(`http://localhost:10000/searchCakes/${key}`);
+                const result = await fetch(`https://belcake-ux.vercel.app/searchCakes/${key}`);
                 const data = await result.json();
 
                 if (Array.isArray(data)) {

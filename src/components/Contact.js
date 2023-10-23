@@ -29,7 +29,7 @@ const Contact = () => {
         else {
 
             setLoading(true)
-            let result = await fetch('http://localhost:10000/sendEmail', {
+            let result = await fetch('https://belcake-ux.vercel.app/sendEmail', {
                 method: 'post',
                 body: JSON.stringify({ contactUserId, contactName, contactEmail, quiry, message }),
                 headers: {
@@ -94,15 +94,6 @@ const Contact = () => {
                             </span>
                         </li>
                     </ul>
-                    {/* <a href="https://api.whatsapp.com/send?phone=7760454812&text=Hii BelCake Terdal">
-                        <li className="bi bi-whatsapp ms-3" id="footer-icon"></li>
-                    </a>
-                    <a href="https://www.facebook.com/shakur.mujawar">
-                        <li className="bi bi-facebook ms-3" id="footer-icon"></li>
-                    </a>
-                    <a href="https://www.instagram.com/belcakes_terdal">
-                        <li className="bi bi-instagram ms-3" id="footer-icon"></li>
-                    </a> */}
                 </ul>
                 <div className="contact-form">
                     <h2>Contact Us</h2>
