@@ -82,7 +82,6 @@ const Navbar = () => {
                     body: JSON.stringify({ userName, mobileNum, email, password }),
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*'
                     },
                 })
 
