@@ -22,7 +22,7 @@ function OrderdCakesList() {
     const [loadingOrderId, setLoadingOrderId] = useState(null);
 
     const getCakeList = async () => {
-        let result = await fetch(`https://belcake-ux.vercel.app/getOrderedList/${userAuth._id}`, {
+        let result = await fetch(`https://belcakeback.vercel.app/getOrderedList/${userAuth._id}`, {
             method: 'post',
             headers: {
                 "Content-Type": "application/json"
@@ -59,7 +59,7 @@ function OrderdCakesList() {
                 try {
                     setLoading(true)
                     setLoadingOrderId(id)
-                    let result = await fetch(`https://belcake-ux.vercel.app/RemoveOrderCake/${id}/${userAuth._id}`, {
+                    let result = await fetch(`https://belcakeback.vercel.app/RemoveOrderCake/${id}/${userAuth._id}`, {
                         method: "DELETE",
                         body: JSON.stringify({ photoOnCake_Id, url, titl, photoOnCake, flavour, purpose, nameOnCake, quantity, amount, fullName, city, phoneNum }),
                         headers: {
