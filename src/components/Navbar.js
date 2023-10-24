@@ -266,9 +266,9 @@ const Navbar = () => {
 
     //profile update handleSubmit 
     const [postImage, setPostImage] = useState({ profileImage: "" })
+    const [loadingProfileUpdate, setLoadingProfileUpdate] = useState(false)
 
     const handleSubmit = async (id) => {
-
         if (postImage.profileImage === "") {
 
             toast.error('Please select image..........!', {
@@ -282,7 +282,7 @@ const Navbar = () => {
             });
         }
         else {
-
+            setLoadingProfileUpdate(true)
             var base64WithPrefix = postImage.profileImage; // Assuming this includes the data URI prefix
             var base64String = base64WithPrefix.split(',')[1]; // Remove the prefix
 
@@ -315,6 +315,8 @@ const Navbar = () => {
                     draggable: true,
                     theme: "dark",
                 });
+                setLoadingProfileUpdate(false)
+                
             }
             else {
                 const profileImage = postImage
@@ -341,7 +343,8 @@ const Navbar = () => {
                         draggable: true,
                         theme: "dark",
                     });
-
+                    
+                    setLoadingProfileUpdate(false)
                     const Ownerauth = JSON.parse(localStorage.getItem('user')) || null;
                     const userEmail = Ownerauth ? Ownerauth.email : '';
                     if (userEmail) {
@@ -829,7 +832,20 @@ const Navbar = () => {
                         </div>
                         <div class="modal-footer" id="frameFooter">
                             <button type="reset" id="footerbtncl" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</button>
-                            <button type="submit" id="footerbtnsubmit" onClick={() => handleSubmit(Ownerauth._id)} class="btn btn-primary">Update</button>
+                            {
+                                loadingProfileUpdate ?
+                                    <div id="footerbtnsubmit">
+                                        <PulseLoader
+                                            color={"#b30dee"}
+                                            loading={loadingProfileUpdate}
+                                            size={18}
+                                            aria-label="Loading Spinner"
+                                            data-testid="loader"
+                                        />
+                                    </div>
+                                :
+                                <button type="submit" id="footerbtnsubmit" onClick={() => handleSubmit(Ownerauth._id)} class="btn btn-primary">Update</button>
+                            }
                         </div>
                     </div>
                 </div>
