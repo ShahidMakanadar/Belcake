@@ -523,7 +523,7 @@ const Navbar = () => {
                                     null
                             }
                             {
-                                userEmail === process.env.REACT_APP_OWNER_EMAIL ?
+                                userEmail === `${process.env.REACT_APP_OWNER_EMAIL}` ?
                                     <>
                                         <li className="nav-item">
                                             <Link className="nav-link active" to="/AddCake">
