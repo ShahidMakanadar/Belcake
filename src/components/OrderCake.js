@@ -442,7 +442,7 @@ const OrderCake = () => {
                                 aria-label="Loading Spinner"
                                 data-testid="loader"
                             />
-                            <h5>Cakes are not available...!</h5>
+                            <h5>Please wait! Cakes are Loading...!</h5>
                         </div>
                 }
             </div>
