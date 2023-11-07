@@ -118,7 +118,7 @@ const OrderProcess = () => {
                 }).then(async (result) => {
                     if (result.isConfirmed) {
                         try {
-                            if (paymentMethod === " currently Disabled") {
+                            if (paymentMethod === "Payment") {
                                 setLoading(true)
                                 let getkey = await fetch('https://belcakeback.vercel.app/getKey')
                                 let OrderData = await fetch(`https://belcakeback.vercel.app/checkout/${ProductId}`, {
