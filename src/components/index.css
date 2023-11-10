@@ -3,10 +3,10 @@
     width: .5rem;
 }
 ::-webkit-scrollbar-track{
-    background-image: linear-gradient(-180deg, rgb(215, 47, 249), #ffb349);
+    background-color: rgb(235, 235, 235);
 }
 ::-webkit-scrollbar-thumb{
-    background-color: rgb(108, 0, 167);
+    background-color: rgb(131, 0, 201);
     background-clip: content-box;
     border-radius: 1rem;
 }
